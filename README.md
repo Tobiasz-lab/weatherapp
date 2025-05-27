@@ -9,7 +9,7 @@ Struktura projektu
 
 ## WeatherApp — Prognoza Pogody
 
-# Opis projektu
+### Opis projektu
 Aplikacja webowa napisana w Python Flask, która pozwala sprawdzić aktualną pogodę dla wybranego miasta i kraju.  
 Dane pogodowe pobierane są z API OpenWeatherMap.
 
