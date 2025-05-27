@@ -1,7 +1,7 @@
 # Etap 1: budowanie zależności
 FROM python:3.12-alpine AS builder
 
-LABEL org.opencontainers.image.authors="Jan Kowalski"
+LABEL org.opencontainers.image.authors="Tobiasz Hofman"
 
 WORKDIR /app
 
