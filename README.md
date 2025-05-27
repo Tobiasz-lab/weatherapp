@@ -5,10 +5,11 @@ Struktura projektu
 - requirements.txt – zależności Pythona
 - .github/workflows/docker-pipeline.yml – definicja pipeline GitHub Actions
 
+---
 
-# WeatherApp — Prognoza Pogody
+## WeatherApp — Prognoza Pogody
 
-## Opis projektu
+# Opis projektu
 Aplikacja webowa napisana w Python Flask, która pozwala sprawdzić aktualną pogodę dla wybranego miasta i kraju.  
 Dane pogodowe pobierane są z API OpenWeatherMap.
 
