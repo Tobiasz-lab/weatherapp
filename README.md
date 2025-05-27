@@ -1,9 +1,9 @@
 Struktura projektu
-    -app.py – główny kod aplikacji Flask
-    -templates/index.html – szablon HTML
-    -Dockerfile – konfiguracja obrazu Docker
-    -requirements.txt – zależności Pythona
-    -.github/workflows/docker-pipeline.yml – definicja pipeline GitHub Actions
+- app.py – główny kod aplikacji Flask
+- templates/index.html – szablon HTML
+- Dockerfile – konfiguracja obrazu Docker
+- requirements.txt – zależności Pythona
+- .github/workflows/docker-pipeline.yml – definicja pipeline GitHub Actions
 
 
 # WeatherApp — Prognoza Pogody
