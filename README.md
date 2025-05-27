@@ -29,12 +29,12 @@ Dane pogodowe pobierane są z API OpenWeatherMap.
 ## Jak uruchomić aplikację lokalnie?
 
 1. Zaloguj się do GitHub Container Registry (GHCR):
-   docker login ghcr.io -u <github-username> -p <personal-access-token>
+   - docker login ghcr.io -u <github-username> -p <personal-access-token>
 2. Pobierz najnowszy obraz:
-   docker pull ghcr.io/tobiasz-lab/weatherapp:latest
+   - docker pull ghcr.io/tobiasz-lab/weatherapp:latest
 3. Uruchom kontener na lokalnymporcie 5000:
-   docker run -p 5000:5000 ghcr.io/tobiasz-lab/weatherapp:latest
+   - docker run -p 5000:5000 ghcr.io/tobiasz-lab/weatherapp:latest
 4. Otwórz przeglądarkę i przejdź do adresu:
-   http://localhost:5000
+   -http://localhost:5000
 
 
