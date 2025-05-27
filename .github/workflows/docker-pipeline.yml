@@ -7,7 +7,7 @@ on:
 
 env:
   IMAGE_NAME: ghcr.io/tobiasz-lab/weatherapp
-  CACHE_REPO: docker.io/tobiasz-lab/weatherapp-cache
+  CACHE_REPO: docker.io/tobekk/weatherapp-cache
 
 jobs:
   build-and-push:
