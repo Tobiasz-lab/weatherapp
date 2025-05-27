@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Prognoza Pogody</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans min-h-screen flex items-center justify-center p-6">
+
+    <div class="w-full max-w-xl bg-white rounded-2xl shadow-lg p-8">
+        <h1 class="text-3xl font-bold mb-6 text-center text-blue-600">🌦 Prognoza Pogody</h1>
+
+        <form method="POST" class="space-y-4">
+            <div>
+                <label for="country" class="block mb-1 font-semibold">Kraj:</label>
+                <select id="country" name="country" onchange="this.form.submit()" class="w-full p-2 border rounded-md">
+                    {% for country in locations %}
+                        <option value="{{ country }}" {% if country == selected_country %}selected{% endif %}>{{ country }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div>
+                <label for="city" class="block mb-1 font-semibold">Miasto:</label>
+                <select id="city" name="city" class="w-full p-2 border rounded-md">
+                    {% for city in locations[selected_country] %}
+                        <option value="{{ city }}">{{ city }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">Sprawdź pogodę</button>
+            </div>
+        </form>
+
+        {% if weather %}
+            <div class="mt-8">
+                {% if weather.error %}
+                    <div class="bg-red-100 text-red-700 p-4 rounded-md">
+                        {{ weather.error }}
+                    </div>
+                {% else %}
+                    <div class="bg-blue-50 p-4 rounded-lg shadow mt-4">
+                        <h2 class="text-xl font-semibold mb-2">{{ weather.miasto }}</h2>
+                        <p><strong>Temperatura:</strong> {{ weather.temperatura }}°C</p>
+                        <p><strong>Opis:</strong> {{ weather.opis }}</p>
+                        <p><strong>Wiatr:</strong> {{ weather.wiatr }} m/s</p>
+                    </div>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>
