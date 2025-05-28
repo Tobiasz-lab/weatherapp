@@ -39,7 +39,6 @@ def get_coordinates(city):
 
     if response.status_code == 200 and response.json():
         data = response.json()[0]
-        print("wywolalo sie")
         return data['lat'], data['lon']
     return None, None
 
